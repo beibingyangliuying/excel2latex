@@ -1,0 +1,2 @@
+class LatexBuilder:
+    pass
