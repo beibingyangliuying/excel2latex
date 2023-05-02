@@ -55,7 +55,7 @@
             <text xml:space="preserve"
                   style="fill:#191919;font-family:Microsoft YaHei;font-size:10.00pt;font-style:italic"><tspan y="115.0" x="4.0">+ interpret(self,context:CellTextContext):list[str,...]</tspan></text>
         </g>
-        <g transform="translate(1332.900000,566.500000)" id="shape6">
+        <g transform="translate(1332.899956,566.500000)" id="shape6">
             <path d="M.0,.0L.0,-46.5L347.4,-46.5L347.4,-65.1" fill="none" stroke-width="1" stroke="#191919"/>
             <path stroke-linecap="round" fill="none" d="M347.4,-75.5L341.4,-65.1L353.4,-65.1L347.4,-75.5"
                   stroke-width="1" stroke-linejoin="round" stroke="#191919"/>
@@ -67,6 +67,7 @@
             <path d="M.0,.0L298.0,.0L298.0,117.0L.0,117.0L.0,.0zM.0,39.0L298.0,39.0L.0,39.0zM.0,78.0L298.0,78.0L.0,78.0z"
                   fill="none" stroke-width="1" stroke="#101843"/>
             <text xml:space="preserve" style="fill:#191919;font-family:微软雅黑;font-size:10.00pt"><tspan y="25.0" x="103.0">BoldExpression</tspan></text>
+            <text xml:space="preserve" style="fill:#191919;font-family:微软雅黑;font-size:10.00pt"><tspan y="64.0" x="4.0" style="text-decoration:underline">+ default:str</tspan></text>
             <text xml:space="preserve" style="fill:#191919;font-family:微软雅黑;font-size:10.00pt"><tspan y="103.0" x="4.0">+ interpret(self,context:CellTextContext):list[str]</tspan></text>
         </g>
         <g transform="translate(1183.020000,813.000000)" id="shape8">
@@ -76,6 +77,7 @@
             <path d="M.0,.0L298.0,.0L298.0,117.0L.0,117.0L.0,.0zM.0,39.0L298.0,39.0L.0,39.0zM.0,78.0L298.0,78.0L.0,78.0z"
                   fill="none" stroke-width="1" stroke="#101843"/>
             <text xml:space="preserve" style="fill:#191919;font-family:微软雅黑;font-size:10.00pt"><tspan y="25.0" x="102.0">ItalicExpression</tspan></text>
+            <text xml:space="preserve" style="fill:#191919;font-family:微软雅黑;font-size:10.00pt"><tspan y="64.0" x="4.0" style="text-decoration:underline">+ default:str</tspan></text>
             <text xml:space="preserve" style="fill:#191919;font-family:微软雅黑;font-size:10.00pt"><tspan y="103.0" x="4.0">+ interpret(self,context:CellTextContext):list[str]</tspan></text>
         </g>
         <g transform="translate(1510.520000,813.000000)" id="shape9">
@@ -85,16 +87,19 @@
             <path d="M.0,.0L298.0,.0L298.0,117.0L.0,117.0L.0,.0zM.0,39.0L298.0,39.0L.0,39.0zM.0,78.0L298.0,78.0L.0,78.0z"
                   fill="none" stroke-width="1" stroke="#101843"/>
             <text xml:space="preserve" style="fill:#191919;font-family:微软雅黑;font-size:10.00pt"><tspan y="25.0" x="87.0">UnderlineExpression</tspan></text>
+            <text xml:space="preserve" style="fill:#191919;font-family:微软雅黑;font-size:10.00pt"><tspan y="64.0" x="4.0" style="text-decoration:underline">+ default:str</tspan></text>
             <text xml:space="preserve" style="fill:#191919;font-family:微软雅黑;font-size:10.00pt"><tspan y="103.0" x="4.0">+ interpret(self,context:CellTextContext):list[str]</tspan></text>
         </g>
         <g transform="translate(1853.520000,813.000000)" id="shape10">
             <path fill="#ffffff"
-                  d="M.0,.0L298.0,.0L298.0,117.0L.0,117.0L.0,.0zM.0,39.0L298.0,39.0L.0,39.0zM.0,78.0L298.0,78.0L.0,78.0z"
+                  d="M.0,.0L298.0,.0L298.0,136.0L.0,136.0L.0,.0zM.0,39.0L298.0,39.0L.0,39.0zM.0,97.0L298.0,97.0L.0,97.0z"
                   fill-rule="nonzero"/>
-            <path d="M.0,.0L298.0,.0L298.0,117.0L.0,117.0L.0,.0zM.0,39.0L298.0,39.0L.0,39.0zM.0,78.0L298.0,78.0L.0,78.0z"
+            <path d="M.0,.0L298.0,.0L298.0,136.0L.0,136.0L.0,.0zM.0,39.0L298.0,39.0L.0,39.0zM.0,97.0L298.0,97.0L.0,97.0z"
                   fill="none" stroke-width="1" stroke="#101843"/>
             <text xml:space="preserve" style="fill:#191919;font-family:微软雅黑;font-size:10.00pt"><tspan y="25.0" x="100.0">ColorExpression</tspan></text>
-            <text xml:space="preserve" style="fill:#191919;font-family:微软雅黑;font-size:10.00pt"><tspan y="103.0" x="4.0">+ interpret(self,context:CellTextContext):list[str]</tspan></text>
+            <text xml:space="preserve" style="fill:#191919;font-family:微软雅黑;font-size:10.00pt"><tspan y="64.0" x="4.0" style="text-decoration:underline">+ default:tuple[int,int,int]</tspan>
+                <tspan y="83.0" x="4.0" style="text-decoration:underline">+ pattern:str</tspan></text>
+            <text xml:space="preserve" style="fill:#191919;font-family:微软雅黑;font-size:10.00pt"><tspan y="122.0" x="4.0">+ interpret(self,context:CellTextContext):list[str]</tspan></text>
         </g>
         <g transform="translate(2003.371386,813.000000)" id="shape11">
             <path d="M.0,.0L.0,-80.0L-670.5,-80.0L-670.5,-97.6" fill="none" stroke-width="1" stroke="#191919"/>
@@ -108,11 +113,12 @@
             <path d="M.0,.0L289.0,.0L289.0,117.0L.0,117.0L.0,.0zM.0,39.0L289.0,39.0L.0,39.0zM.0,78.0L289.0,78.0L.0,78.0z"
                   fill="none" stroke-width="1" stroke="#101843"/>
             <text xml:space="preserve" style="fill:#191919;font-family:微软雅黑;font-size:10.00pt"><tspan y="25.0" x="99.0">TextExpression</tspan></text>
+            <text xml:space="preserve" style="fill:#191919;font-family:微软雅黑;font-size:10.00pt"><tspan y="64.0" x="4.0" style="text-decoration:underline">+ table:dict[int,str]</tspan></text>
             <text xml:space="preserve" style="fill:#191919;font-family:微软雅黑;font-size:10.00pt"><tspan y="103.0" x="4.0">+ interpret(self,context:CellTextContext):str</tspan></text>
         </g>
-        <g transform="translate(2341.846000,813.000000)" id="shape13">
-            <path d="M.0,.0L.0,-80.0L235.9,-80.0L235.9,-97.1" fill="none" stroke-width="1" stroke="#191919"/>
-            <path stroke-linecap="round" fill="none" d="M235.9,-107.5L229.9,-97.1L241.9,-97.1L235.9,-107.5"
+        <g transform="translate(2341.845673,813.000000)" id="shape13">
+            <path d="M.0,.0L.0,-80.0L235.9,-80.0L235.9,-97.6" fill="none" stroke-width="1" stroke="#191919"/>
+            <path stroke-linecap="round" fill="none" d="M235.9,-108.0L229.9,-97.6L241.9,-97.6L235.9,-108.0"
                   stroke-width="1" stroke-linejoin="round" stroke="#191919"/>
         </g>
         <g transform="translate(517.520000,813.000000)" id="shape14">
@@ -143,24 +149,24 @@
             <path stroke-linecap="round" fill="none" d="M-252.4,-107.5L-258.4,-97.1L-246.4,-97.1L-252.4,-107.5"
                   stroke-width="1" stroke-linejoin="round" stroke="#191919"/>
         </g>
-        <g transform="translate(669.885000,813.000000)" id="shape17">
-            <path d="M.0,.0L.0,-80.0L663.0,-80.0L663.0,-97.1" fill="none" stroke-width="1" stroke="#191919"/>
-            <path stroke-linecap="round" fill="none" d="M663.0,-107.5L657.0,-97.1L669.0,-97.1L663.0,-107.5"
+        <g transform="translate(669.886000,813.000000)" id="shape17">
+            <path d="M.0,.0L.0,-80.0L663.0,-80.0L663.0,-97.6" fill="none" stroke-width="1" stroke="#191919"/>
+            <path stroke-linecap="round" fill="none" d="M663.0,-108.0L657.0,-97.6L669.0,-97.6L663.0,-108.0"
                   stroke-width="1" stroke-linejoin="round" stroke="#191919"/>
         </g>
-        <g transform="translate(1002.620000,813.000000)" id="shape18">
-            <path d="M.0,.0L.0,-80.0L330.3,-80.0L330.3,-97.1" fill="none" stroke-width="1" stroke="#191919"/>
-            <path stroke-linecap="round" fill="none" d="M330.3,-107.5L324.3,-97.1L336.3,-97.1L330.3,-107.5"
+        <g transform="translate(1002.621386,813.000000)" id="shape18">
+            <path d="M.0,.0L.0,-80.0L330.3,-80.0L330.3,-97.6" fill="none" stroke-width="1" stroke="#191919"/>
+            <path stroke-linecap="round" fill="none" d="M330.3,-108.0L324.3,-97.6L336.3,-97.6L330.3,-108.0"
                   stroke-width="1" stroke-linejoin="round" stroke="#191919"/>
         </g>
-        <g transform="translate(1332.870000,813.000000)" id="shape19">
-            <path d="M.0,.0L.0,-2.0L.0,-28.0L.0,-97.1" fill="none" stroke-width="1" stroke="#191919"/>
-            <path stroke-linecap="round" fill="none" d="M.0,-107.5L-6.0,-97.1L6.0,-97.1L.0,-107.5" stroke-width="1"
+        <g transform="translate(1332.871386,813.000000)" id="shape19">
+            <path d="M.0,.0L.0,-28.0L.0,-97.6" fill="none" stroke-width="1" stroke="#191919"/>
+            <path stroke-linecap="round" fill="none" d="M.0,-108.0L-6.0,-97.6L6.0,-97.6L.0,-108.0" stroke-width="1"
                   stroke-linejoin="round" stroke="#191919"/>
         </g>
-        <g transform="translate(1660.370000,813.000000)" id="shape20">
-            <path d="M.0,.0L.0,-80.0L-327.5,-80.0L-327.5,-97.1" fill="none" stroke-width="1" stroke="#191919"/>
-            <path stroke-linecap="round" fill="none" d="M-327.5,-107.5L-333.5,-97.1L-321.5,-97.1L-327.5,-107.5"
+        <g transform="translate(1660.371386,813.000000)" id="shape20">
+            <path d="M.0,.0L.0,-80.0L-327.5,-80.0L-327.5,-97.6" fill="none" stroke-width="1" stroke="#191919"/>
+            <path stroke-linecap="round" fill="none" d="M-327.5,-108.0L-333.5,-97.6L-321.5,-97.6L-327.5,-108.0"
                   stroke-width="1" stroke-linejoin="round" stroke="#191919"/>
         </g>
     </g>
