@@ -30,36 +30,45 @@ class EntityExpression(AbstractExpression):
 
 
 class ColorExpression(CommandExpression):
+    default = (0, 0, 0)
+    pattern = r'\textcolor[rgb]{0}'
+
     def interpret(self, context: CellTextContext) -> list[str, ...]:
-        if context.color == (0, 0, 0):
+        if context.color == self.default:
             return []
         else:
             temp = '{' + ','.join((str(number) for number in context.color)) + '}'
-            return [r'\textcolor[rgb]{}'.format(temp)]
+            return [self.pattern.format(temp)]
 
 
 class BoldExpression(CommandExpression):
+    default = r'\textbf'
+
     def interpret(self, context: CellTextContext) -> list[str, ...]:
         if not context.bold:
             return []
         else:
-            return [r'\textbf']
+            return [self.default]
 
 
 class ItalicExpression(CommandExpression):
+    default = r'\textit'
+
     def interpret(self, context: CellTextContext) -> list[str, ...]:
         if not context.italic:
             return []
         else:
-            return [r'\textit']
+            return [self.default]
 
 
 class UnderlineExpression(CommandExpression):
+    default = r'\underline'
+
     def interpret(self, context: CellTextContext) -> list[str, ...]:
         if not context.underline:
             return []
         else:
-            return [r'\underline']
+            return [self.default]
 
 
 class TextExpression(EntityExpression):
@@ -71,7 +80,11 @@ class TextExpression(EntityExpression):
                            '\n': r'\\'})
 
     def interpret(self, context: CellTextContext) -> str:
-        return context.text.translate(self.table)
+        result = context.text.translate(self.table)
+        if r'\\' in result:
+            result = r'\makecell{' + result + '}'
+
+        return result
 
 
 class ConcatenateExpression(CommandExpression):
@@ -92,3 +105,27 @@ class ConcatenateExpression(CommandExpression):
                 result.extend(temp)
 
         return result
+
+
+class SingleParameterExpression(EntityExpression):
+    def __init__(self, command_expression: CommandExpression, entity_expression: EntityExpression):
+        self.command_expression = command_expression
+        self.entity_expression = entity_expression
+
+    def interpret(self, context: CellTextContext) -> str:
+        commands = self.command_expression.interpret(context)
+        parameter = self.entity_expression.interpret(context)
+
+        if not commands:  # 说明没有命令需要执行
+            return parameter
+
+        result = []
+        bracket = '{'
+        for command in commands:
+            result.append(command)
+            result.append(bracket)
+        else:
+            result.append(parameter)
+
+        result.extend(['}'] * len(commands))
+        return ''.join(result)

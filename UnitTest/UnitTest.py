@@ -57,14 +57,14 @@ class InterpreterTestCase(unittest.TestCase):
         context.text = 'abc%%abc'
         self.assertEqual(text_expression.interpret(context), r'abc\%\%abc', '转义%')
 
-        context.text = 'abc\n\nabc'
-        self.assertEqual(text_expression.interpret(context), r'abc\\\\abc')
+        context.text = 'abc\nabc'
+        self.assertEqual(text_expression.interpret(context), r'\makecell{abc\\abc}')
 
         context.text = r'abc\\abc'
         self.assertEqual(text_expression.interpret(context), r'abc\textbackslash{}\textbackslash{}abc', '转义\\')
 
         context.text = '$^_\\%\n'
-        self.assertEqual(text_expression.interpret(context), r'\$\^\_\textbackslash{}\%\\', '综合转义')
+        self.assertEqual(text_expression.interpret(context), r'\makecell{\$\^\_\textbackslash{}\%\\}', '综合转义')
 
     def test_color_expression(self):
         from Interpreter import CellTextContext, ColorExpression
@@ -103,6 +103,28 @@ class InterpreterTestCase(unittest.TestCase):
 
         context.color = (0, 0, 0)
         self.assertEqual(concatenate_expression.interpret(context), [])
+
+    def test_single_parameter_expression(self):
+        from Interpreter import CellTextContext, ConcatenateExpression, BoldExpression, ItalicExpression, \
+            UnderlineExpression, ColorExpression, SingleParameterExpression, TextExpression
+
+        context = CellTextContext((1, 0, 0,), True, True, True, 'what?')
+        concatenate_expression = ConcatenateExpression(ColorExpression(), BoldExpression(), ItalicExpression(),
+                                                       UnderlineExpression())
+        text_expression = TextExpression()
+        single_parameter_expression = SingleParameterExpression(concatenate_expression, text_expression)
+
+        self.assertEqual(single_parameter_expression.interpret(context),
+                         r'\textcolor[rgb]{1,0,0}{\textbf{\textit{\underline{what?}}}}')
+
+        context.color = (0, 0, 0)
+        self.assertEqual(single_parameter_expression.interpret(context), r'\textbf{\textit{\underline{what?}}}')
+
+        context.italic = False
+        self.assertEqual(single_parameter_expression.interpret(context), r'\textbf{\underline{what?}}')
+
+        context.text = 'abc\nabc'
+        self.assertEqual(single_parameter_expression.interpret(context), r'\textbf{\underline{\makecell{abc\\abc}}}')
 
 
 if __name__ == '__main__':
