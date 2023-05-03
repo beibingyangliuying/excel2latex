@@ -7,8 +7,8 @@ class ContentTestCase(unittest.TestCase):
     """
 
     def test_simplest(self):
-        from Context.ExcelContext import ExcelContext
-        from Content import ExcelContent
+        from Context.excel_context import ExcelContext
+        from content import ExcelContent
 
         with ExcelContext(r'test.xlsx', 'simplest', 'A1:D5') as context:
             content = ExcelContent(context.range)
@@ -17,8 +17,8 @@ class ContentTestCase(unittest.TestCase):
             print(content)
 
     def test_simplest_with_borders(self):
-        from Context.ExcelContext import ExcelContext
-        from Content import ExcelContent
+        from Context.excel_context import ExcelContext
+        from content import ExcelContent
 
         with ExcelContext(r'test.xlsx', 'simplest with borders', 'A1:D5') as context:
             content = ExcelContent(context.range)
@@ -27,8 +27,8 @@ class ContentTestCase(unittest.TestCase):
             print(content)
 
     def test_simplest_with_format(self):
-        from Context.ExcelContext import ExcelContext
-        from Content import ExcelContent
+        from Context.excel_context import ExcelContext
+        from content import ExcelContent
 
         with ExcelContext(r'test.xlsx', 'simplest with format', 'A1:D5') as context:
             content = ExcelContent(context.range)
@@ -39,7 +39,7 @@ class ContentTestCase(unittest.TestCase):
 
 class CellTextContextTestCase(unittest.TestCase):
     def test_text_expression(self):
-        from Context.CellTextContext import TextExpression, CellTextContext
+        from Context.cell_text_context import TextExpression, CellTextContext
 
         context = CellTextContext((0, 0, 0), False, False, False, 'abcabcabc')
         text_expression = TextExpression()
@@ -67,7 +67,7 @@ class CellTextContextTestCase(unittest.TestCase):
         self.assertEqual(text_expression.interpret(context), r'\makecell{\$\^\_\textbackslash{}\%\\}', '综合转义')
 
     def test_color_expression(self):
-        from Context.CellTextContext import CellTextContext, ColorExpression
+        from Context.cell_text_context import CellTextContext, ColorExpression
         color_expression = ColorExpression()
 
         context = CellTextContext((1, 0, 0), False, False, False, 'what?')
@@ -77,7 +77,7 @@ class CellTextContextTestCase(unittest.TestCase):
         self.assertEqual(color_expression.interpret(context), [])
 
     def test_concatenate_expression(self):
-        from Context.CellTextContext import CellTextContext, CommandChainExpression, BoldExpression, ItalicExpression, \
+        from Context.cell_text_context import CellTextContext, CommandChainExpression, BoldExpression, ItalicExpression, \
             UnderlineExpression, ColorExpression
 
         context = CellTextContext((1, 0, 0,), True, True, True, 'what?')
@@ -105,7 +105,7 @@ class CellTextContextTestCase(unittest.TestCase):
         self.assertEqual(concatenate_expression.interpret(context), [])
 
     def test_single_parameter_expression(self):
-        from Context.CellTextContext import CellTextContext, CommandChainExpression, BoldExpression, ItalicExpression, \
+        from Context.cell_text_context import CellTextContext, CommandChainExpression, BoldExpression, ItalicExpression, \
             UnderlineExpression, ColorExpression, ParameterExpression, TextExpression
 
         context = CellTextContext((1, 0, 0,), True, True, True, 'what?')
@@ -127,9 +127,9 @@ class CellTextContextTestCase(unittest.TestCase):
         self.assertEqual(single_parameter_expression.interpret(context), r'\textbf{\underline{\makecell{abc\\abc}}}')
 
     def test_interpret_cell_data(self):
-        from Content import ExcelContent
-        from Context.ExcelContext import ExcelContext
-        from Context.CellTextContext import CellTextContext, CommandChainExpression, BoldExpression, ItalicExpression, \
+        from content import ExcelContent
+        from Context.excel_context import ExcelContext
+        from Context.cell_text_context import CellTextContext, CommandChainExpression, BoldExpression, ItalicExpression, \
             UnderlineExpression, ColorExpression, ParameterExpression, TextExpression
         single_parameter_expression = ParameterExpression(
             CommandChainExpression(ColorExpression(), BoldExpression(), ItalicExpression(), UnderlineExpression()),

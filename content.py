@@ -1,5 +1,5 @@
 import xlwings as xlw
-from Constants import style_code
+from constants import style_code
 
 
 class ExcelContent:
