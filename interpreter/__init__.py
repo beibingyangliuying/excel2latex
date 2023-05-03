@@ -1,1 +1,1 @@
-__all__ = ['cell_text_context']
+__all__ = ['range_text_context']

@@ -1,6 +1,44 @@
+import xlwings as xlw
+
+from constants import style_code
 from abc import ABC, abstractmethod
 from typing import Any
 from decorators import singleton
+
+
+class RangeTextContext:
+    def __init__(self, scope: xlw.Range):
+        self.shape: tuple[int, int] = tuple(scope.shape)
+        self.cell_text_contexts: list[list[CellTextContext, ...], ...] = []
+
+        for i in range(scope.shape[0]):
+            self.cell_text_contexts.append([])
+
+            for j in range(scope.shape[1]):
+                cell = scope[i, j]
+                font = cell.api.DisplayFormat.Font
+
+                self.cell_text_contexts[i].append(
+                    CellTextContext(xlw.utils.int_to_rgb(font.Color),
+                                    font.Bold,
+                                    font.Italic,
+                                    False if font.Underline == style_code['not_underline'] else True,
+                                    str.strip(cell.api.Text)))
+
+    def __getitem__(self, item):
+        if isinstance(item, tuple):
+            i = item[0]
+            j = item[1]
+        elif isinstance(item, int):
+            i = item // self.shape[1] - 1
+            j = item - i * self.shape[1] - 1
+        else:
+            raise IndexError('Unsupported index: {0}'.format(item))
+
+        return self.cell_text_contexts[i][j]
+
+    def __str__(self):
+        return str(self.cell_text_contexts)
 
 
 class CellTextContext:
@@ -10,6 +48,10 @@ class CellTextContext:
         self.italic = italic
         self.underline = underline
         self.text = text
+
+    def __str__(self):
+        return '{color:{0},bold:{1},italic:{2},underline:{3},text:{4}}'.format(self.color, self.bold, self.italic,
+                                                                               self.underline, self.text)
 
 
 class AbstractExpression(ABC):
@@ -135,11 +177,3 @@ class ParameterExpression(LiteralExpression):
 
         result.extend(['}'] * len(commands))
         return ''.join(result)
-
-
-class ConstantExpression(LiteralExpression):
-    def __init__(self, value: str):
-        self._value = value
-
-    def interpret(self, context: CellTextContext) -> str:
-        return self._value

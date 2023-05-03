@@ -1,12 +1,7 @@
 import xlwings as xlw
 
 
-class ExcelContext:
-    """
-    管理Excel上下文
-    持有Excel工作簿、工作表和范围的引用
-    """
-
+class ExcelReader:
     def __init__(self, file_path: str, sheet_name: str, scope: str):
         self.file_path = file_path
         self.sheet_name = sheet_name
