@@ -1,5 +1,6 @@
 from abc import ABC, abstractmethod
 from typing import Any
+from decorators import singleton
 
 
 class CellTextContext:
@@ -23,12 +24,13 @@ class CommandExpression(AbstractExpression):
         pass
 
 
-class EntityExpression(AbstractExpression):
+class LiteralExpression(AbstractExpression):
     @abstractmethod
     def interpret(self, context: CellTextContext) -> str:
         pass
 
 
+@singleton
 class ColorExpression(CommandExpression):
     default = (0, 0, 0)
     pattern = r'\textcolor[rgb]{0}'
@@ -41,6 +43,7 @@ class ColorExpression(CommandExpression):
             return [self.pattern.format(temp)]
 
 
+@singleton
 class BoldExpression(CommandExpression):
     default = r'\textbf'
 
@@ -51,6 +54,7 @@ class BoldExpression(CommandExpression):
             return [self.default]
 
 
+@singleton
 class ItalicExpression(CommandExpression):
     default = r'\textit'
 
@@ -61,6 +65,7 @@ class ItalicExpression(CommandExpression):
             return [self.default]
 
 
+@singleton
 class UnderlineExpression(CommandExpression):
     default = r'\underline'
 
@@ -71,7 +76,8 @@ class UnderlineExpression(CommandExpression):
             return [self.default]
 
 
-class TextExpression(EntityExpression):
+@singleton
+class TextExpression(LiteralExpression):
     translate_table = str.maketrans({'$': r'\$',
                                      '^': r'\^',
                                      '_': r'\_',
@@ -107,8 +113,8 @@ class CommandChainExpression(CommandExpression):
         return result
 
 
-class ParameterExpression(EntityExpression):
-    def __init__(self, command: CommandExpression, entity: EntityExpression):
+class ParameterExpression(LiteralExpression):
+    def __init__(self, command: CommandExpression, entity: LiteralExpression):
         self.command = command
         self.entity = entity
 
@@ -131,7 +137,7 @@ class ParameterExpression(EntityExpression):
         return ''.join(result)
 
 
-class ConstantExpression(EntityExpression):
+class ConstantExpression(LiteralExpression):
     def __init__(self, value: str):
         self._value = value
 

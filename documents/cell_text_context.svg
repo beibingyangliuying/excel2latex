@@ -1,0 +1,212 @@
+<svg height="1597" xmlns="http://www.w3.org/2000/svg" xmlns:ev="http://www.w3.org/2001/xml-events" width="3377"
+     viewBox="0 0 3377 1597" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs/>
+    <g transform="translate(5.5,5.5)" id="page1">
+        <rect height="1587" fill="none" width="3368" y="0" x="0"/>
+        <g transform="translate(1541.520000,52.000000)" id="shape1">
+            <path fill="#fff2ae"
+                  d="M.0,.0L293.0,.0L293.0,231.0L.0,231.0L.0,.0zM.0,39.0L293.0,39.0L.0,39.0zM.0,154.0L293.0,154.0L.0,154.0z"
+                  fill-rule="nonzero"/>
+            <path fill="none" stroke-width="1"
+                  d="M.0,.0L293.0,.0L293.0,231.0L.0,231.0L.0,.0zM.0,39.0L293.0,39.0L.0,39.0zM.0,154.0L293.0,154.0L.0,154.0z"
+                  stroke="#454545"/>
+            <text style="fill:#191919;font-family:微软雅黑;font-size:10.00pt" xml:space="preserve"><tspan y="25.0" x="98.0">CellTextContext</tspan></text>
+            <text style="fill:#191919;font-family:微软雅黑;font-size:10.00pt" xml:space="preserve"><tspan y="64.0" x="4.0">+ color:tuple[int,int,int]</tspan>
+                <tspan y="83.0" x="4.0">+ bold:bool</tspan>
+                <tspan y="102.0" x="4.0">+ italic:bool</tspan>
+                <tspan y="121.0" x="4.0">+ underline:bool</tspan>
+                <tspan y="140.0" x="4.0">+ text:str</tspan></text>
+            <text style="fill:#191919;font-family:微软雅黑;font-size:10.00pt" xml:space="preserve"><tspan y="179.0" x="4.0">+ </tspan>
+                <tspan y="198.0" x="4.0">__init__(self,color:tuple[int,int,int],bold:bool,itali</tspan>
+                <tspan y="217.0" x="4.0">c:bool,underline:bool,text:str)</tspan></text>
+        </g>
+        <g transform="translate(1541.520000,352.000000)" id="shape2">
+            <path fill="#fff2ae"
+                  d="M.0,.0L293.0,.0L293.0,119.0L.0,119.0L.0,.0zM.0,40.0L293.0,40.0L.0,40.0zM.0,79.0L293.0,79.0L.0,79.0z"
+                  fill-rule="nonzero"/>
+            <path fill="none" stroke-width="1"
+                  d="M.0,.0L293.0,.0L293.0,119.0L.0,119.0L.0,.0zM.0,40.0L293.0,40.0L.0,40.0zM.0,79.0L293.0,79.0L.0,79.0z"
+                  stroke="#454545"/>
+            <text style="fill:#191919;font-family:Microsoft YaHei;font-size:10.00pt;font-style:italic"
+                  xml:space="preserve"><tspan y="26.0" x="91.5">AbstractExpression</tspan></text>
+            <text style="fill:#191919;font-family:Microsoft YaHei;font-size:10.00pt;font-style:italic"
+                  xml:space="preserve"><tspan y="105.0" x="4.0">+ interpret(self,context:CellTextContext):Any</tspan></text>
+        </g>
+        <g transform="translate(2570.690000,567.000000)" id="shape3">
+            <path fill="#fff2ae"
+                  d="M.0,.0L293.0,.0L293.0,119.0L.0,119.0L.0,.0zM.0,40.0L293.0,40.0L.0,40.0zM.0,79.0L293.0,79.0L.0,79.0z"
+                  fill-rule="nonzero"/>
+            <path fill="none" stroke-width="1"
+                  d="M.0,.0L293.0,.0L293.0,119.0L.0,119.0L.0,.0zM.0,40.0L293.0,40.0L.0,40.0zM.0,79.0L293.0,79.0L.0,79.0z"
+                  stroke="#454545"/>
+            <text style="fill:#191919;font-family:Microsoft YaHei;font-size:10.00pt;font-style:italic"
+                  xml:space="preserve"><tspan y="26.0" x="98.0">LiteralExpression</tspan></text>
+            <text style="fill:#191919;font-family:Microsoft YaHei;font-size:10.00pt;font-style:italic"
+                  xml:space="preserve"><tspan y="105.0" x="4.0">+ interpret(self,context:CellTextContext):str</tspan></text>
+        </g>
+        <g transform="translate(2718.030000,567.000000)" id="shape4">
+            <path fill="none" stroke-width="1" d="M.0,.0L.0,-46.5L-1029.2,-46.5L-1029.2,-85.6" stroke="#303030"/>
+            <path stroke-linejoin="round" fill="none" stroke-width="1"
+                  d="M-1029.2,-96.0L-1035.2,-85.6L-1023.2,-85.6L-1029.2,-96.0" stroke-linecap="round" stroke="#303030"/>
+        </g>
+        <g transform="translate(1145.120000,567.000000)" id="shape5">
+            <path fill="#fff2ae"
+                  d="M.0,.0L293.0,.0L293.0,139.0L.0,139.0L.0,.0zM.0,40.0L293.0,40.0L.0,40.0zM.0,79.0L293.0,79.0L.0,79.0z"
+                  fill-rule="nonzero"/>
+            <path fill="none" stroke-width="1"
+                  d="M.0,.0L293.0,.0L293.0,139.0L.0,139.0L.0,.0zM.0,40.0L293.0,40.0L.0,40.0zM.0,79.0L293.0,79.0L.0,79.0z"
+                  stroke="#454545"/>
+            <text style="fill:#191919;font-family:Microsoft YaHei;font-size:10.00pt;font-style:italic"
+                  xml:space="preserve"><tspan y="26.0" x="83.5">CommandExpression</tspan></text>
+            <text style="fill:#191919;font-family:Microsoft YaHei;font-size:10.00pt;font-style:italic"
+                  xml:space="preserve"><tspan y="105.0" x="4.0">+ </tspan>
+                <tspan y="125.0" x="4.0">interpret(self,context:CellTextContext):list[str,...]</tspan></text>
+        </g>
+        <g transform="translate(1292.460000,567.000000)" id="shape6">
+            <path fill="none" stroke-width="1" d="M.0,.0L.0,-46.5L396.4,-46.5L396.4,-85.6" stroke="#303030"/>
+            <path stroke-linejoin="round" fill="none" stroke-width="1"
+                  d="M396.4,-96.0L390.4,-85.6L402.4,-85.6L396.4,-96.0" stroke-linecap="round" stroke="#303030"/>
+        </g>
+        <g transform="translate(790.920000,813.000000)" id="shape7">
+            <path fill="#fff2ae"
+                  d="M.0,.0L293.0,.0L293.0,136.0L.0,136.0L.0,.0zM.0,39.0L293.0,39.0L.0,39.0zM.0,78.0L293.0,78.0L.0,78.0z"
+                  fill-rule="nonzero"/>
+            <path fill="none" stroke-width="1"
+                  d="M.0,.0L293.0,.0L293.0,136.0L.0,136.0L.0,.0zM.0,39.0L293.0,39.0L.0,39.0zM.0,78.0L293.0,78.0L.0,78.0z"
+                  stroke="#454545"/>
+            <text style="fill:#191919;font-family:微软雅黑;font-size:10.00pt" xml:space="preserve"><tspan y="25.0" x="100.5">BoldExpression</tspan></text>
+            <text style="fill:#191919;font-family:微软雅黑;font-size:10.00pt" xml:space="preserve"><tspan y="64.0" style="text-decoration:underline" x="4.0">+ default:str</tspan></text>
+            <text style="fill:#191919;font-family:微软雅黑;font-size:10.00pt" xml:space="preserve"><tspan y="103.0" x="4.0">+ </tspan>
+                <tspan y="122.0" x="4.0">interpret(self,context:CellTextContext):list[str]</tspan></text>
+        </g>
+        <g transform="translate(1145.120000,813.000000)" id="shape8">
+            <path fill="#fff2ae"
+                  d="M.0,.0L293.0,.0L293.0,136.0L.0,136.0L.0,.0zM.0,39.0L293.0,39.0L.0,39.0zM.0,78.0L293.0,78.0L.0,78.0z"
+                  fill-rule="nonzero"/>
+            <path fill="none" stroke-width="1"
+                  d="M.0,.0L293.0,.0L293.0,136.0L.0,136.0L.0,.0zM.0,39.0L293.0,39.0L.0,39.0zM.0,78.0L293.0,78.0L.0,78.0z"
+                  stroke="#454545"/>
+            <text style="fill:#191919;font-family:微软雅黑;font-size:10.00pt" xml:space="preserve"><tspan y="25.0" x="99.5">ItalicExpression</tspan></text>
+            <text style="fill:#191919;font-family:微软雅黑;font-size:10.00pt" xml:space="preserve"><tspan y="64.0" style="text-decoration:underline" x="4.0">+ default:str</tspan></text>
+            <text style="fill:#191919;font-family:微软雅黑;font-size:10.00pt" xml:space="preserve"><tspan y="103.0" x="4.0">+ </tspan>
+                <tspan y="122.0" x="4.0">interpret(self,context:CellTextContext):list[str]</tspan></text>
+        </g>
+        <g transform="translate(1499.320000,813.000000)" id="shape9">
+            <path fill="#fff2ae"
+                  d="M.0,.0L293.0,.0L293.0,136.0L.0,136.0L.0,.0zM.0,39.0L293.0,39.0L.0,39.0zM.0,78.0L293.0,78.0L.0,78.0z"
+                  fill-rule="nonzero"/>
+            <path fill="none" stroke-width="1"
+                  d="M.0,.0L293.0,.0L293.0,136.0L.0,136.0L.0,.0zM.0,39.0L293.0,39.0L.0,39.0zM.0,78.0L293.0,78.0L.0,78.0z"
+                  stroke="#454545"/>
+            <text style="fill:#191919;font-family:微软雅黑;font-size:10.00pt" xml:space="preserve"><tspan y="25.0" x="84.5">UnderlineExpression</tspan></text>
+            <text style="fill:#191919;font-family:微软雅黑;font-size:10.00pt" xml:space="preserve"><tspan y="64.0" style="text-decoration:underline" x="4.0">+ default:str</tspan></text>
+            <text style="fill:#191919;font-family:微软雅黑;font-size:10.00pt" xml:space="preserve"><tspan y="103.0" x="4.0">+ </tspan>
+                <tspan y="122.0" x="4.0">interpret(self,context:CellTextContext):list[str]</tspan></text>
+        </g>
+        <g transform="translate(1853.520000,813.000000)" id="shape10">
+            <path fill="#fff2ae"
+                  d="M.0,.0L293.0,.0L293.0,155.0L.0,155.0L.0,.0zM.0,39.0L293.0,39.0L.0,39.0zM.0,97.0L293.0,97.0L.0,97.0z"
+                  fill-rule="nonzero"/>
+            <path fill="none" stroke-width="1"
+                  d="M.0,.0L293.0,.0L293.0,155.0L.0,155.0L.0,.0zM.0,39.0L293.0,39.0L.0,39.0zM.0,97.0L293.0,97.0L.0,97.0z"
+                  stroke="#454545"/>
+            <text style="fill:#191919;font-family:微软雅黑;font-size:10.00pt" xml:space="preserve"><tspan y="25.0" x="97.5">ColorExpression</tspan></text>
+            <text style="fill:#191919;font-family:微软雅黑;font-size:10.00pt" xml:space="preserve"><tspan y="64.0" style="text-decoration:underline" x="4.0">+ default:tuple[int,int,int]</tspan>
+                <tspan y="83.0" style="text-decoration:underline" x="4.0">+ pattern:str</tspan></text>
+            <text style="fill:#191919;font-family:微软雅黑;font-size:10.00pt" xml:space="preserve"><tspan y="122.0" x="4.0">+ </tspan>
+                <tspan y="141.0" x="4.0">interpret(self,context:CellTextContext):list[str]</tspan></text>
+        </g>
+        <g transform="translate(2000.860000,813.000000)" id="shape11">
+            <path fill="none" stroke-width="1" d="M.0,.0L.0,-79.0L-708.4,-79.0L-708.4,-96.6" stroke="#303030"/>
+            <path stroke-linejoin="round" fill="none" stroke-width="1"
+                  d="M-708.4,-107.0L-714.4,-96.6L-702.4,-96.6L-708.4,-107.0" stroke-linecap="round" stroke="#303030"/>
+        </g>
+        <g transform="translate(2196.520000,813.000000)" id="shape12">
+            <path fill="#fff2ae"
+                  d="M.0,.0L293.0,.0L293.0,117.0L.0,117.0L.0,.0zM.0,39.0L293.0,39.0L.0,39.0zM.0,78.0L293.0,78.0L.0,78.0z"
+                  fill-rule="nonzero"/>
+            <path fill="none" stroke-width="1"
+                  d="M.0,.0L293.0,.0L293.0,117.0L.0,117.0L.0,.0zM.0,39.0L293.0,39.0L.0,39.0zM.0,78.0L293.0,78.0L.0,78.0z"
+                  stroke="#454545"/>
+            <text style="fill:#191919;font-family:微软雅黑;font-size:10.00pt" xml:space="preserve"><tspan y="25.0" x="101.0">TextExpression</tspan></text>
+            <text style="fill:#191919;font-family:微软雅黑;font-size:10.00pt" xml:space="preserve"><tspan y="64.0" style="text-decoration:underline" x="4.0">+ translate_table:dict[int,str]</tspan></text>
+            <text style="fill:#191919;font-family:微软雅黑;font-size:10.00pt" xml:space="preserve"><tspan y="103.0" x="4.0">+ interpret(self,context:CellTextContext):str</tspan></text>
+        </g>
+        <g transform="translate(2343.860000,813.000000)" id="shape13">
+            <path fill="none" stroke-width="1" d="M.0,.0L.0,-99.0L374.2,-99.0L374.2,-116.6" stroke="#303030"/>
+            <path stroke-linejoin="round" fill="none" stroke-width="1"
+                  d="M374.2,-127.0L368.2,-116.6L380.2,-116.6L374.2,-127.0" stroke-linecap="round" stroke="#303030"/>
+        </g>
+        <g transform="translate(436.720000,813.000000)" id="shape14">
+            <path fill="#fff2ae"
+                  d="M.0,.0L293.0,.0L293.0,174.0L.0,174.0L.0,.0zM.0,39.0L293.0,39.0L.0,39.0zM.0,78.0L293.0,78.0L.0,78.0z"
+                  fill-rule="nonzero"/>
+            <path fill="none" stroke-width="1"
+                  d="M.0,.0L293.0,.0L293.0,174.0L.0,174.0L.0,.0zM.0,39.0L293.0,39.0L.0,39.0zM.0,78.0L293.0,78.0L.0,78.0z"
+                  stroke="#454545"/>
+            <text style="fill:#191919;font-family:微软雅黑;font-size:10.00pt" xml:space="preserve"><tspan y="25.0" x="64.5">CommandChainExpression</tspan></text>
+            <text style="fill:#191919;font-family:微软雅黑;font-size:10.00pt" xml:space="preserve"><tspan y="64.0" x="4.0">+ commands:list[CommandExpression,...]</tspan></text>
+            <text style="fill:#191919;font-family:微软雅黑;font-size:10.00pt" xml:space="preserve"><tspan y="103.0" x="4.0">+ __init__(self,*args:CommandExpression)</tspan>
+                <tspan y="122.0" x="4.0">+ </tspan>
+                <tspan y="141.0" x="4.0">interpret(self,context:CellTextContext):list[str,...</tspan>
+                <tspan y="160.0" x="4.0">]</tspan></text>
+        </g>
+        <g transform="translate(2570.690000,813.000000)" id="shape15">
+            <path fill="#fff2ae"
+                  d="M.0,.0L293.0,.0L293.0,193.0L.0,193.0L.0,.0zM.0,39.0L293.0,39.0L.0,39.0zM.0,97.0L293.0,97.0L.0,97.0z"
+                  fill-rule="nonzero"/>
+            <path fill="none" stroke-width="1"
+                  d="M.0,.0L293.0,.0L293.0,193.0L.0,193.0L.0,.0zM.0,39.0L293.0,39.0L.0,39.0zM.0,97.0L293.0,97.0L.0,97.0z"
+                  stroke="#454545"/>
+            <text style="fill:#191919;font-family:微软雅黑;font-size:10.00pt" xml:space="preserve"><tspan y="25.0" x="82.5">ParameterExpression</tspan></text>
+            <text style="fill:#191919;font-family:微软雅黑;font-size:10.00pt" xml:space="preserve"><tspan y="64.0" x="4.0">+ command:CommandExpression</tspan>
+                <tspan y="83.0" x="4.0">+ entity:LiteralExpression</tspan></text>
+            <text style="fill:#191919;font-family:微软雅黑;font-size:10.00pt" xml:space="preserve"><tspan y="122.0" x="4.0">+ </tspan>
+                <tspan y="141.0" x="4.0">__init__(self,command:CommandExpression,en</tspan>
+                <tspan y="160.0" x="4.0">tity:LiteralExpression)</tspan>
+                <tspan y="179.0" x="4.0">+ interpret(self,context:CellTextContext):str</tspan></text>
+        </g>
+        <g transform="translate(2718.030000,813.000000)" id="shape16">
+            <path fill="none" stroke-width="1" d="M.0,.0L.0,-116.6" stroke="#303030"/>
+            <path stroke-linejoin="round" fill="none" stroke-width="1" d="M.0,-127.0L-6.0,-116.6L6.0,-116.6L.0,-127.0"
+                  stroke-linecap="round" stroke="#303030"/>
+        </g>
+        <g transform="translate(584.057000,813.000000)" id="shape17">
+            <path fill="none" stroke-width="1" d="M.0,.0L.0,-79.0L708.4,-79.0L708.4,-96.6" stroke="#303030"/>
+            <path stroke-linejoin="round" fill="none" stroke-width="1"
+                  d="M708.4,-107.0L702.4,-96.6L714.4,-96.6L708.4,-107.0" stroke-linecap="round" stroke="#303030"/>
+        </g>
+        <g transform="translate(938.257000,813.000000)" id="shape18">
+            <path fill="none" stroke-width="1" d="M.0,.0L.0,-79.0L354.2,-79.0L354.2,-96.6" stroke="#303030"/>
+            <path stroke-linejoin="round" fill="none" stroke-width="1"
+                  d="M354.2,-107.0L348.2,-96.6L360.2,-96.6L354.2,-107.0" stroke-linecap="round" stroke="#303030"/>
+        </g>
+        <g transform="translate(1292.460000,813.000000)" id="shape19">
+            <path fill="none" stroke-width="1" d="M.0,.0L.0,-96.6" stroke="#303030"/>
+            <path stroke-linejoin="round" fill="none" stroke-width="1" d="M.0,-107.0L-6.0,-96.6L6.0,-96.6L.0,-107.0"
+                  stroke-linecap="round" stroke="#303030"/>
+        </g>
+        <g transform="translate(1646.660000,813.000000)" id="shape20">
+            <path fill="none" stroke-width="1" d="M.0,.0L.0,-79.0L-354.2,-79.0L-354.2,-96.6" stroke="#303030"/>
+            <path stroke-linejoin="round" fill="none" stroke-width="1"
+                  d="M-354.2,-107.0L-360.2,-96.6L-348.2,-96.6L-354.2,-107.0" stroke-linecap="round" stroke="#303030"/>
+        </g>
+        <g transform="translate(2944.860000,813.000000)" id="shape21">
+            <path fill="#fff2ae"
+                  d="M.0,.0L293.0,.0L293.0,136.0L.0,136.0L.0,.0zM.0,39.0L293.0,39.0L.0,39.0zM.0,78.0L293.0,78.0L.0,78.0z"
+                  fill-rule="nonzero"/>
+            <path fill="none" stroke-width="1"
+                  d="M.0,.0L293.0,.0L293.0,136.0L.0,136.0L.0,.0zM.0,39.0L293.0,39.0L.0,39.0zM.0,78.0L293.0,78.0L.0,78.0z"
+                  stroke="#454545"/>
+            <text style="fill:#191919;font-family:微软雅黑;font-size:10.00pt" xml:space="preserve"><tspan y="25.0" x="86.0">ConstantExpression</tspan></text>
+            <text style="fill:#191919;font-family:微软雅黑;font-size:10.00pt" xml:space="preserve"><tspan y="64.0" x="4.0">- value:str</tspan></text>
+            <text style="fill:#191919;font-family:微软雅黑;font-size:10.00pt" xml:space="preserve"><tspan y="103.0" x="4.0">+ __init__(self,value:str)</tspan>
+                <tspan y="122.0" x="4.0">+ interpret(self,context:CellTextContext):str</tspan></text>
+        </g>
+        <g transform="translate(3092.197000,813.000000)" id="shape22">
+            <path fill="none" stroke-width="1" d="M.0,.0L.0,-99.0L-374.2,-99.0L-374.2,-116.6" stroke="#303030"/>
+            <path stroke-linejoin="round" fill="none" stroke-width="1"
+                  d="M-374.2,-127.0L-380.2,-116.6L-368.2,-116.6L-374.2,-127.0" stroke-linecap="round" stroke="#303030"/>
+        </g>
+    </g>
+</svg>
