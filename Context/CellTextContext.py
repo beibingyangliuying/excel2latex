@@ -72,32 +72,32 @@ class UnderlineExpression(CommandExpression):
 
 
 class TextExpression(EntityExpression):
-    table = str.maketrans({'$': r'\$',
-                           '^': r'\^',
-                           '_': r'\_',
-                           '\\': r'\textbackslash{}',
-                           '%': r'\%',
-                           '\n': r'\\'})
+    translate_table = str.maketrans({'$': r'\$',
+                                     '^': r'\^',
+                                     '_': r'\_',
+                                     '\\': r'\textbackslash{}',
+                                     '%': r'\%',
+                                     '\n': r'\\'})
 
     def interpret(self, context: CellTextContext) -> str:
-        result = context.text.translate(self.table)
+        result = context.text.translate(self.translate_table)
         if r'\\' in result:
             result = r'\makecell{' + result + '}'
 
         return result
 
 
-class ConcatenateExpression(CommandExpression):
+class CommandChainExpression(CommandExpression):
     def __init__(self, *args: CommandExpression):
         """
         :param args: CommandExpression序列，顺序很重要！
         """
-        self.expressions = args
+        self.commands = args
 
     def interpret(self, context: CellTextContext) -> list[str, ...]:
         result = []
 
-        for expression in self.expressions:
+        for expression in self.commands:
             temp = expression.interpret(context)
             if not temp:
                 continue
@@ -107,14 +107,14 @@ class ConcatenateExpression(CommandExpression):
         return result
 
 
-class SingleParameterExpression(EntityExpression):
-    def __init__(self, command_expression: CommandExpression, entity_expression: EntityExpression):
-        self.command_expression = command_expression
-        self.entity_expression = entity_expression
+class ParameterExpression(EntityExpression):
+    def __init__(self, command: CommandExpression, entity: EntityExpression):
+        self.command = command
+        self.entity = entity
 
     def interpret(self, context: CellTextContext) -> str:
-        commands = self.command_expression.interpret(context)
-        parameter = self.entity_expression.interpret(context)
+        commands = self.command.interpret(context)
+        parameter = self.entity.interpret(context)
 
         if not commands:  # 说明没有命令需要执行
             return parameter
@@ -129,3 +129,11 @@ class SingleParameterExpression(EntityExpression):
 
         result.extend(['}'] * len(commands))
         return ''.join(result)
+
+
+class ConstantExpression(EntityExpression):
+    def __init__(self, value: str):
+        self._value = value
+
+    def interpret(self, context: CellTextContext) -> str:
+        return self._value
